@@ -35,6 +35,7 @@ export default function Home() {
                         placeholder="name"
                         onChange={formik.handleChange}
                         value={formik.values.name}
+                        className={styles.input}
                     />
                     <input
                         id="cost"
@@ -43,6 +44,7 @@ export default function Home() {
                         placeholder="cost"
                         onChange={formik.handleChange}
                         value={formik.values.cost}
+                        className={styles.input}
                     />
                     <button type="submit" className={styles.add}>
                         Add
