@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.scss";
+import styles from "styles/Home.module.scss";
 import { useFormik } from "formik";
+import { Heading } from "components/atoms/Heading/Heading";
+import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 
 export default function Home() {
     const formik = useFormik({
@@ -16,17 +18,23 @@ export default function Home() {
 
     return (
         <div className={styles.wrapper}>
-            <h1>Budget-app</h1>
+            <Heading isBig>Budget-app</Heading>
             <div className={styles.budgetPanel}>
-                <div className={styles.budget}>Budget: 1500$</div>
-                <div className={styles.remaining}>Remaining: 1500$</div>
-                <div className={styles.spented}>Spented: 0$</div>
+                <div className={styles.budget}>
+                    <Paragraph>Budget: 1500$</Paragraph>
+                </div>
+                <div className={styles.remaining}>
+                    <Paragraph>Remaining: 1500$</Paragraph>
+                </div>
+                <div className={styles.spented}>
+                    <Paragraph>Spented: 0$</Paragraph>
+                </div>
             </div>
-            <h2>Expenses</h2>
+            <Heading>Expenses</Heading>
             <div className={styles.expenses}>
-                <p>Nothing here... Add something!</p>
+                <Paragraph>Nothing here... Add something!</Paragraph>
             </div>
-            <h2>Add expense</h2>
+            <Heading>Add expense</Heading>
             <div className={styles.addExpense}>
                 <form className={styles.form} onSubmit={formik.handleSubmit}>
                     <input
