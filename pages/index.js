@@ -3,8 +3,8 @@ import Image from "next/image";
 import styles from "styles/Home.module.scss";
 import { useFormik } from "formik";
 import { Heading } from "components/atoms/Heading/Heading";
-import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 import { BudgetPanel } from "components/molecules/BudgetPanel/BudgetPanel";
+import { Expenses } from "components/molecules/Expenses/Expenses";
 
 export default function Home() {
     const formik = useFormik({
@@ -21,10 +21,7 @@ export default function Home() {
         <div className={styles.wrapper}>
             <Heading isBig>Budget-app</Heading>
             <BudgetPanel />
-            <Heading>Expenses</Heading>
-            <div className={styles.expenses}>
-                <Paragraph>Nothing here... Add something!</Paragraph>
-            </div>
+            <Expenses />
             <Heading>Add expense</Heading>
             <div className={styles.addExpense}>
                 <form className={styles.form} onSubmit={formik.handleSubmit}>
