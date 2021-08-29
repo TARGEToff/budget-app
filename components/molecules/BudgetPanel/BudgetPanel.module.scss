@@ -1,0 +1,26 @@
+.budgetPanel {
+    display: flex;
+    flex-direction: row;
+
+    .budget {
+        height: 60px;
+        width: 200px;
+        margin: 15px;
+        background-color: #ccc;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 7.5px;
+    }
+
+    .remaining {
+        @extend .budget;
+        background-color: #b3e5c6;
+    }
+
+    .spented {
+        @extend .budget;
+        background-color: #e5bbb3;
+    }
+}

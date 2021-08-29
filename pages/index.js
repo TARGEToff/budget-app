@@ -4,6 +4,7 @@ import styles from "styles/Home.module.scss";
 import { useFormik } from "formik";
 import { Heading } from "components/atoms/Heading/Heading";
 import { Paragraph } from "components/atoms/Paragraph/Paragraph";
+import { BudgetPanel } from "components/molecules/BudgetPanel/BudgetPanel";
 
 export default function Home() {
     const formik = useFormik({
@@ -19,17 +20,7 @@ export default function Home() {
     return (
         <div className={styles.wrapper}>
             <Heading isBig>Budget-app</Heading>
-            <div className={styles.budgetPanel}>
-                <div className={styles.budget}>
-                    <Paragraph>Budget: 1500$</Paragraph>
-                </div>
-                <div className={styles.remaining}>
-                    <Paragraph>Remaining: 1500$</Paragraph>
-                </div>
-                <div className={styles.spented}>
-                    <Paragraph>Spented: 0$</Paragraph>
-                </div>
-            </div>
+            <BudgetPanel />
             <Heading>Expenses</Heading>
             <div className={styles.expenses}>
                 <Paragraph>Nothing here... Add something!</Paragraph>
