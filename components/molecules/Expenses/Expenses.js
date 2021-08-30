@@ -1,14 +1,21 @@
 import styles from "./Expenses.module.scss"
 import { Heading } from "components/atoms/Heading/Heading";
-import { Paragraph } from "components/atoms/Paragraph/Paragraph";
+import { connect } from "react-redux"
+import { Expense } from "components/molecules/Expense/Expense";
 
-const Expenses = () => (
+const Expenses = ({ expenses }) => (
 
     <div className={styles.expenses}>
         <Heading>Expenses</Heading>
-        <Paragraph>Nothing here... Add something!</Paragraph>
+        { expenses.map(
+            ({ id, title, cost }) => (
+                <Expense key={id} title={title} cost={cost} />
+            )
+        )}
     </div>
 
 );
 
-export { Expenses }
+const mapStateToProps = ({ expenses }) => ({ expenses });
+
+export const ConnectedExpenses = connect(mapStateToProps)(Expenses)
