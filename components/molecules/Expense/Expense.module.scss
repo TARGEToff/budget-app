@@ -1,0 +1,22 @@
+.expense {
+    display: grid;
+    grid-template-columns: 15fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 42rem;
+    margin: 5px;
+    padding: 8px 30px;
+
+    .cost>p {
+        background-color: #4b80e3;
+        width: fit-content;
+        color: white;
+        padding: 3px 10px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+}
+
