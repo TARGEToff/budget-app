@@ -2,17 +2,17 @@ const initialState = {
     expenses: [
         {
             id: 0,
-            title: "Shopping",
+            name: "Shopping",
             cost: 70
         },
         {
             id: 1,
-            title: "Fuel",
+            name: "Fuel",
             cost: 30
         },
         {
             id: 2,
-            title: "House rent",
+            name: "House rent",
             cost: 100
         }
     ],

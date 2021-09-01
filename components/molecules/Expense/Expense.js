@@ -3,9 +3,9 @@ import { Paragraph } from "components/atoms/Paragraph/Paragraph";
 import { connect } from "react-redux";
 import { removeExpense } from "actions";
 
-const Expense = ({ id, title, cost, removeExpense }) => (
+const Expense = ({ id, name, cost, removeExpense }) => (
     <div className={styles.expense}>
-        <Paragraph>{title}</Paragraph>
+        <Paragraph>{name}</Paragraph>
         <div className={styles.cost}>
             <Paragraph >{cost}$</Paragraph>
         </div>

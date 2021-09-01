@@ -8,8 +8,8 @@ const Expenses = ({ expenses }) => (
     <div className={styles.expenses}>
         <Heading>Expenses</Heading>
         { expenses.map(
-            ({ id, title, cost }) => (
-                <Expense key={id} id={id} title={title} cost={cost} />
+            ({ id, name, cost }) => (
+                <Expense key={id} id={id} name={name} cost={cost} />
             )
         )}
     </div>
