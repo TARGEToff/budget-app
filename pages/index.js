@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "styles/Home.module.scss";
 import { Heading } from "components/atoms/Heading/Heading";
-import { BudgetPanel } from "components/molecules/BudgetPanel/BudgetPanel";
+import { ConnectedBudgetPanel as BudgetPanel } from "components/molecules/BudgetPanel/BudgetPanel";
 import { ConnectedExpenses as Expenses } from "components/molecules/Expenses/Expenses";
 import { AddExpense } from "components/molecules/AddExpense/AddExpense";
 
