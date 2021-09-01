@@ -1,7 +1,7 @@
 import styles from "./Expenses.module.scss"
 import { Heading } from "components/atoms/Heading/Heading";
 import { connect } from "react-redux"
-import { Expense } from "components/molecules/Expense/Expense";
+import { ConnectedExpense as Expense } from "components/molecules/Expense/Expense";
 
 const Expenses = ({ expenses }) => (
 
@@ -9,7 +9,7 @@ const Expenses = ({ expenses }) => (
         <Heading>Expenses</Heading>
         { expenses.map(
             ({ id, title, cost }) => (
-                <Expense key={id} title={title} cost={cost} />
+                <Expense key={id} id={id} title={title} cost={cost} />
             )
         )}
     </div>

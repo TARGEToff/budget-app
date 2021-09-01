@@ -9,7 +9,6 @@ const BudgetPanel = ({ expenses }) => {
     const expensesSum = expenses.reduce((previousValue, currentValue) => {
         return previousValue + currentValue.cost
     }, 0)
-    console.log(expensesSum)
 
     return (
         <div className={styles.budgetPanel}>
