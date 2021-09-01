@@ -29,6 +29,14 @@ const rootReducer = (state = initialState, action) => {
                     ),
                 ],
             }
+        case "ADD_EXPENSE":
+            return {
+                ...state,
+                [action.payload.type]: [
+                    ...state[action.payload.type],
+                    action.payload.expenseContent,
+                ],
+            }
     }
     return state;
 };
