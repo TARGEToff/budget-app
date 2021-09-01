@@ -1,15 +1,18 @@
 import styles from "./AddExpense.module.scss";
 import { Heading } from "components/atoms/Heading/Heading";
+import { connect } from "react-redux";
 import { useFormik } from "formik";
+import { addExpense as addExpenseContent } from "actions";
 
-const AddExpense = () => {
+const AddExpense = ({ addExpense }) => {
     const formik = useFormik({
         initialValues: {
             name: "",
             cost: "",
         },
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
+            addExpense(values);
+            formik.resetForm(); 
         },
     });
 
@@ -42,5 +45,8 @@ const AddExpense = () => {
     )
 };
 
+const mapDispatchToProps = (dispatch) => ({
+    addExpense: (expenseContent) => dispatch(addExpenseContent(expenseContent)),
+});
 
-export { AddExpense };
+export const ConnectedAddExpense = connect(null, mapDispatchToProps)(AddExpense)
