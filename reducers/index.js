@@ -19,6 +19,17 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case "REMOVE_EXPENSE":
+            return {
+                ...state,
+                [action.payload.type]: [
+                    ...state[action.payload.type].filter(
+                        (expense) => expense.id !== action.payload.id
+                    ),
+                ],
+            }
+    }
     return state;
 };
 
