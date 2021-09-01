@@ -12,15 +12,18 @@ const BudgetPanel = ({ expenses }) => {
 
     return (
         <div className={styles.budgetPanel}>
-            <div className={styles.budget}>
+            <div className={styles.content}>
+                <div className={styles.budget}>
                 <Paragraph>Budget: {budget}$</Paragraph>
+                </div>
+                <div className={styles.remaining}>
+                    <Paragraph>Remaining: {budget - expensesSum}$</Paragraph>
+                </div>
+                <div className={styles.spented}>
+                    <Paragraph>Spented: {expensesSum}$</Paragraph>
+                </div>
             </div>
-            <div className={styles.remaining}>
-                <Paragraph>Remaining: {budget - expensesSum}$</Paragraph>
-            </div>
-            <div className={styles.spented}>
-                <Paragraph>Spented: {expensesSum}$</Paragraph>
-            </div>
+            { budget < expensesSum && <Paragraph>Expenses have exceeded your budget!</Paragraph> }
         </div>
     )
 };

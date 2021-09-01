@@ -1,4 +1,4 @@
-.budgetPanel {
+.content {
     display: flex;
     flex-direction: row;
 
@@ -24,3 +24,16 @@
         background-color: #e5bbb3;
     }
 }
+
+.budgetPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.budgetPanel>p {
+    position: absolute;
+    top: 135px;
+    font-size: 0.8rem;
+}
+
