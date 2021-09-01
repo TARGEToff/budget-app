@@ -7,6 +7,7 @@ const Expense = ({ title, cost }) => (
         <div className={styles.cost}>
             <Paragraph >{cost}$</Paragraph>
         </div>
+        <button className={styles.button}>x</button>
     </div>
 );
 
