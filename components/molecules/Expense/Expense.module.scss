@@ -31,3 +31,21 @@
     }
 }
 
+@media (min-width: 500px) and (max-width: 700px) { 
+
+    .expense {
+        width: 30rem;
+        padding: 8px 10px 8px 25px;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 499px) { 
+
+    .expense {
+        width: 20rem;
+        padding: 8px 10px 8px 15px;
+    }
+
+}
+

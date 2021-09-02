@@ -80,3 +80,31 @@
     bottom: -2px;
 }
 
+@media (min-width: 300px) and (max-width: 700px) { 
+
+    .budgetPanel {
+        display: flex;
+        flex-direction: column;
+
+        .budget {
+            width: 300px;
+            margin: 10px 15px;
+
+            .input {
+                width: 100px;
+            }
+        }
+
+        .validation {
+            left: 45px;
+            bottom: 142px;
+        }
+    }
+
+    .budgetPanel > p {
+        left: 50px;
+        bottom: -6px;
+    }
+
+}
+
