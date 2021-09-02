@@ -1,6 +1,7 @@
-.content {
+.budgetPanel {
     display: flex;
     flex-direction: row;
+    position: relative;
 
     .budget {
         height: 60px;
@@ -12,6 +13,45 @@
         align-items: center;
         justify-content: center;
         border-radius: 7.5px;
+
+        .input {
+            height: 25px;
+            width: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px; 
+            padding: 5px;
+            outline: none;
+        }
+    
+        .input:hover {
+            border: 1px solid #4b80e3;
+        }
+    
+        .input:focus {
+            border: 1px solid #4b80e3;
+            box-shadow: 0px 0px 0px 2.5px rgba(79, 186, 228, 0.5);
+        }
+
+        .edit {
+            margin: 7.5px;
+            position: relative;
+            left: 10px;
+            width: 40px;
+            height: 25px; 
+            font-size: 0.8rem;
+            background-color: #3676ee;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+    
+        .edit:hover {
+            background-color: #2d63c7;
+        }
+    
+        .edit:active {
+            box-shadow: 0px 0px 1px 3px rgba(79, 186, 228, 0.5);
+        }
     }
 
     .remaining {
@@ -23,17 +63,20 @@
         @extend .budget;
         background-color: #e5bbb3;
     }
+
+    .validation {
+        position: absolute;
+        left: -2px;
+        text-align: center;
+        width: 230px;
+        bottom: -17px;
+        font-size: 0.8rem;
+    }
 }
 
-.budgetPanel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.budgetPanel>p {
-    position: absolute;
-    top: 135px;
-    font-size: 0.8rem;
+.budgetPanel > p {
+    @extend .validation;
+    left: 230px;
+    bottom: -2px;
 }
 
