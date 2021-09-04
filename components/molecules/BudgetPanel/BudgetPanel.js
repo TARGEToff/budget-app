@@ -15,8 +15,7 @@ const BudgetPanel = ({ expenses }) => {
 
     const validationSchema = Yup.object().shape({
         budget: Yup.number()
-            .max(999999, "Not too much?")
-            .integer("Cost must be a number")
+            .max(1000001, "Not too much?")
             .positive("Cost must be positive")
             .required("Cost field is required"),
     });
